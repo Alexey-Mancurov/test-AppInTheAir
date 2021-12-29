@@ -1,0 +1,136 @@
+.wrapper
+    margin-top: 25px
+
+.tabList
+    margin-top: 5px
+    display: flex
+    align-items: center
+
+.item
+    font-weight: 600
+    font-size: 16px
+    line-height: 150%
+    letter-spacing: 0.5px
+    color: #8F8F8F
+    position: relative
+    cursor: pointer
+
+    &.active
+        color: #000
+
+        &::after
+            background-color: #000
+
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        bottom: -7px
+        left: -8px
+        width: 140%
+        height: 1.5px
+        background-color: #8F8F8F
+
+    &+.item
+        margin-left: 18px
+
+.orderList
+    margin-top: 35px
+
+.load
+    margin-top: 20px
+
+.orderItem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #fff
+    padding: 20px 30px
+    min-height: 80px
+    border-radius: 14px
+
+    &+.orderItem
+        margin-top: 5px
+
+        @media (max-width: 767px)
+            margin-top: 10px
+
+
+    @media (max-width: 767px)
+        padding: 10px 18px
+        min-height: 70px
+        border-radius: 8px
+
+.orderMain
+    display: flex
+    align-items: center
+    margin-right: 8px
+
+.orderImg
+    width: 40px
+    height: 40px
+    object-fit: cover
+
+    @media (max-width: 767px)
+        width: 30px
+        height: 30px
+
+.orderBox
+    margin-left: 30px
+
+    @media (max-width: 767px)
+        margin-left: 22px
+
+.orderTitle
+    font-weight: bold
+    font-size: 18px
+    line-height: 135%
+    color: #000
+
+    @media (max-width: 767px)
+        font-size: 16px
+
+.orderData
+    font-weight: 500
+    font-size: 13px
+    line-height: 135%
+    color: #8F8F8F
+
+    span
+        display: inline-block
+
+    span+span
+        margin-left: 15px
+
+        @media (max-width: 767px)
+            margin-left: 10px
+
+    @media (max-width: 767px)
+        font-size: 11px
+        max-width: 280px
+        width: 100%
+
+.price
+    font-weight: bold
+    font-size: 20px
+    line-height: 120%
+    text-align: right
+    letter-spacing: 0.5px
+    color: #000
+
+    @media (max-width: 767px)
+        font-size: 18px
+
+.details
+    font-weight: 500
+    font-size: 13px
+    line-height: 125%
+    text-align: right
+    color: #3D72EC
+
+    &:hover
+        text-decoration: underline
+
+    @media (max-width: 767px)
+        font-size: 12px
+
