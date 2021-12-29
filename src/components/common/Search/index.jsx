@@ -4,10 +4,9 @@ import { FILTER_ORDERS } from "../../../store/orders/type";
 import s from "./search.module.sass";
 const Search = () => {
   const [value, setValue] = useState("");
-  const getValue = (e) => {
-    setValue(e.target.value);
-  };
+
   const dispatch = useDispatch()
+  
   const handleSubmit = (e) => {
    e.preventDefault()
    dispatch({type:FILTER_ORDERS, payload: value})
@@ -23,7 +22,7 @@ const Search = () => {
         type="text"
         placeholder="Search in orders"
         value={value}
-        onChange={(e) => getValue(e)}
+        onChange={(e) => setValue(e.target.value)}
       />
     </form>
   );

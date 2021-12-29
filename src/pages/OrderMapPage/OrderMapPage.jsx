@@ -17,7 +17,7 @@ const OrderMapPage = () => {
         <p className={s.grayTitle}>Reservation is confirmed!</p>
         <TitleLarge title="Order details" />
         <p className={s.email}>
-          Email sent on <span>a***v@gmail.com</span>{" "}
+          Email sent on <span>a***v@gmail.com</span>
         </p>
         <div className={s.wrapContainer}>
           <div className={s.wrap}>
@@ -93,7 +93,7 @@ const OrderMapPage = () => {
             }}
             className={s.map}
           >
-          <Placemark defaultGeometry={[55.765, 37.606]} />
+            <Placemark defaultGeometry={[55.765, 37.606]} />
           </Map>
         </YMaps>
       </div>

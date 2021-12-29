@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { API } from "../../api/api";
 import { SET_ORDERS } from "../../store/orders/type";
 import List from "./List";
+import { ordersRequest } from "./ordersRequest";
 
 const Orders = () => {
   const dispatch = useDispatch();
@@ -19,19 +20,9 @@ const Orders = () => {
 
   useEffect(() => {
     if (currentTypeOrders === "upcoming") {
-      const ordersRequest = (async () => {
-        setIsLoading(true);
-        const data = await API.orders();
-        dispatch({ type: SET_ORDERS, payload: data });
-        setIsLoading(false);
-      })();
+      ordersRequest(setIsLoading, dispatch, "orders", SET_ORDERS);
     } else if (currentTypeOrders === "past") {
-      const ordersRequest = (async () => {
-        setIsLoading(true);
-        const data = await API.pastOrders();
-        dispatch({ type: SET_ORDERS, payload: data });
-        setIsLoading(false);
-      })();
+      ordersRequest(setIsLoading, dispatch, "pastOrders", SET_ORDERS);
     }
   }, [currentTypeOrders]);
 
